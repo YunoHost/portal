@@ -34,7 +34,8 @@ body {
 /* GLOBAL */
 .btn,
 .select,
-.input {
+.input.input,
+.join-item.btn {
   min-height: 2.5rem;
   height: 2.5rem;
 }

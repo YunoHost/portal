@@ -87,7 +87,7 @@ async function onSearchSubmit() {
         <li
           v-for="app in apps"
           :key="app.label"
-          class="flex flex-auto border border-neutral rounded p-4 relative hover:bg-neutral hover:text-neutral-content"
+          class="flex text-align flex-auto btn btn-outline btn-neutral !h-auto p-5 relative flex-nowrap items-start justify-normal text-left font-normal"
         >
           <img
             v-if="app.logo"

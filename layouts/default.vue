@@ -37,7 +37,7 @@ async function logout() {
 </script>
 
 <template>
-  <div class="container mx-auto p-10 min-h-screen flex flex-col">
+  <div class="container mx-auto p-6 md:p-10 min-h-screen flex flex-col">
     <BaseAlert
       v-if="queryMsg"
       variant="warning"
