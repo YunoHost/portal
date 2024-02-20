@@ -76,25 +76,31 @@ const themesAsOptions = [
 
     <div class="lg:flex lg:justify-between">
       <section
-        class="lg:w-1/2 lg:me-20 h-full card card-body border border-neutral my-10"
+        class="lg:w-1/2 lg:me-20 h-full card card-bordered border-base-300 my-10"
       >
-        <h2 class="text-3xl mb-3">{{ t('edit_personal_settings') }}</h2>
+        <div class="card-header bg-base-300 py-4 px-8">
+          <h2 class="text-3xl">{{ t('edit_personal_settings') }}</h2>
+        </div>
 
-        <UserInfoForm />
+        <UserInfoForm class="p-8" />
       </section>
 
-      <section class="lg:w-1/2 card card-body border border-neutral my-10">
-        <h2 class="text-3xl mb-3">{{ $t('change_password') }}</h2>
+      <section class="lg:w-1/2 card card-bordered border-base-300 my-10">
+        <div class="card-header bg-base-300 py-4 px-8">
+          <h2 class="text-3xl">{{ $t('change_password') }}</h2>
+        </div>
 
-        <UserPasswordForm />
+        <UserPasswordForm class="p-8" />
       </section>
     </div>
 
-    <section class="card card-body border border-neutral my-10">
-      <h2 class="text-3xl mb-3">{{ t('edit_browser_settings') }}</h2>
+    <section class="card card-bordered border-base-300 my-10">
+      <div class="card-header bg-base-300 py-4 px-8">
+        <h2 class="text-3xl">{{ t('edit_browser_settings') }}</h2>
+      </div>
 
-      <form novalidate @submit.prevent>
-        <div role="group" class="flex align mb-3">
+      <form class="p-8" novalidate @submit.prevent>
+        <div role="group" class="flex flex-wrap align mb-3">
           <!-- eslint-disable-next-line vuejs-accessibility/label-has-for -->
           <label for="language" class="label me-3">{{ t('language') }}</label>
           <select
@@ -113,7 +119,7 @@ const themesAsOptions = [
           </select>
         </div>
 
-        <div role="group" class="flex align">
+        <div role="group" class="flex flex-wrap align">
           <!-- eslint-disable-next-line vuejs-accessibility/label-has-for -->
           <label for="theme" class="label me-3">{{ t('theme') }}</label>
           <select
@@ -135,3 +141,10 @@ const themesAsOptions = [
     </section>
   </div>
 </template>
+
+<style scoped>
+.card .card-header {
+  border-top-left-radius: var(--rounded-box);
+  border-top-right-radius: var(--rounded-box);
+}
+</style>
