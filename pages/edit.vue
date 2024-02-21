@@ -31,6 +31,7 @@ const themesAsOptions = [
   'system',
   'light',
   'dark',
+  'legacy',
   'cupcake',
   'bumblebee',
   'emerald',
