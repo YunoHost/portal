@@ -8,6 +8,11 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/yunohost/sso',
     buildAssetsDir: '/assets/',
+    head: {
+      link: [
+        { rel: 'stylesheet', href: '/yunohost/sso/customassets/custom.css' },
+      ],
+    },
   },
   modules: [
     '@nuxtjs/color-mode',
