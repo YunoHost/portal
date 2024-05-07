@@ -60,7 +60,7 @@
         "field_invalid": "La valeur du champ n'est pas valide",
         "field_required": "La valeur du champ est obligatoire",
         "password_not_match": "Les mots de passe ne correspondent pas.",
-        "string_too_short": "Valeur non valide : doit contenir au moins {min} caractères",
+        "string_too_short": "Valeur non valide : doit contenir au moins {min} caractères",
         "email": "Adresse mail invalide : elle doit être alphanumérique et peut contenir les caractères '_.' (par exemple : dupond{'@'}exemple.fr, dup0nd-1{'@'}exemple.fr)"
     },
     "form_has_errors": "Le formulaire contient quelques erreurs",
