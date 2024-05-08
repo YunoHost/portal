@@ -51,7 +51,7 @@
         "footer": "Passer au pied de page"
     },
     "ssowat": {
-        "access_denied": "Vous n'êtes pas autorisé à accéder à cette page.",
+        "access_denied": "Vous n'avez pas l'autorisation d'accéder à cette page.",
         "protected": "Veuillez vous connecter pour accéder à cette page."
     },
     "theme": "Thème",
