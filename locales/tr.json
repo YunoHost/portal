@@ -2,7 +2,8 @@
     "_language": {
         "code": "tr",
         "dir": "ltr",
-        "name": "Türkçe"
+        "name": "Türkçe",
+        "fallback": "tr"
     },
     "add_forward": "Bir e-posta yönlendirme adresi ekleyin",
     "add_mail": "Bir e-posta takma adı ekleyin",
