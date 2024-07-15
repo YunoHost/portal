@@ -2,7 +2,8 @@
     "_language": {
         "code": "id",
         "dir": "ltr",
-        "name": "Bahasa Indonesia"
+        "name": "Bahasa Indonesia",
+        "fallback": "id"
     },
     "add_forward": "Buat alamat surel terusan",
     "add_mail": "Buat surel alias",
@@ -14,7 +15,7 @@
     "footerlink_edit": "Sunting profil saya",
     "footerlink_support": "Dukungan",
     "fullname": "Nama Lengkap",
-    "good_practices_about_user_password": "Pilih kata sandi sekurang-kurangnya 8 karakter - meskipun memang adalah hal yang baik jika menggunakan yang lebih panjang (cth. parafrasa) dan/atau menggunakan berbagai macam karakter (kapital, huruf kecil, angka, dan karakter lainnya).",
+    "good_practices_about_user_password": "Pilih kata sandi pengguna yang terdiri dari minimal 8 karakter - meskipun sebaiknya menggunakan kata sandi yang lebih panjang (cth. frasasandi) dan/atau menggunakan berbagai jenis karakter (huruf besar, huruf kecil, angka, dan karakter khusus).",
     "logged_out": "Berhasil keluar",
     "login": "Masuk",
     "logout": "Keluar",
@@ -24,5 +25,45 @@
     "new_mail": "surelbaru{'@'}domainku.org",
     "new_password": "Kata sandi baru",
     "password": "Kata sandi",
-    "username": "Nama Pengguna"
+    "username": "Nama Pengguna",
+    "v": {
+        "email": "Surel invalid: harus alfanumerik dan karakter '_.' (cth. someone{'@'}example.com, s0me-1{'@'}example.com)",
+        "field_invalid": "Nilai bidang tidak valid",
+        "field_required": "Nilai bidang wajib diisi",
+        "password_not_match": "Sandi tidak sesuai.",
+        "string_too_short": "Nilai invalid: setidaknya harus {min} karakter"
+    },
+    "api": {
+        "processing": "Memproses…"
+    },
+    "app_list": "Daftar aplikasi",
+    "automatic": "Otomatis ({name})",
+    "back_to_apps": "Kembali ke daftar aplikasi",
+    "confirm_new_password": "Konfirmasi sandi baru",
+    "edit_browser_settings": "Edit pengaturan khusus peramban",
+    "edit_personal_settings": "Edit informasi personal",
+    "mail_address": "Alamat surel",
+    "form_has_errors": "Form berisi beberapa kesalahan",
+    "language": "Bahasa",
+    "mail_forwards": "Alamat penerusan surel",
+    "no_apps": "Tidak ada aplikasi untuk dicantumkan di sini, karena belum ada aplikasi web yang dipasang di server, atau karena Anda tidak memiliki akses ke aplikasi apa pun. Silakan hubungi admin server untuk info lebih lanjut!",
+    "password_changed_reconnect": "Sandi Anda telah berubah, silakan menyambung kembali.",
+    "possibly_invalid_password": "Kemungkinan sandi tidak valid",
+    "save": "Simpan",
+    "possibly_invalid_username": "Kemungkinan nama tidak valid",
+    "primary_mail_adress": "Alamat surat primer",
+    "remove": "Singkirkan",
+    "search": "Cari",
+    "search_engine_placeholder": "Cari dengan {engine}",
+    "skip_link": {
+        "footer": "Lewati ke catatan kaki",
+        "main_content": "Lewati ke konten utama"
+    },
+    "ssowat": {
+        "access_denied": "Anda tidak diperbolehkan mengakses url ini.",
+        "protected": "Silakan masuk untuk mengakses url ini."
+    },
+    "theme": "Tema",
+    "user_profile_updated": "Informasi pribadi pengguna berhasil diperbarui!",
+    "visitor": "Pengunjung"
 }
