@@ -9,6 +9,10 @@ defineProps<{
 </template>
 
 <style>
+.intro {
+  @apply mt-4;
+}
+
 .intro p {
   @apply mb-4;
 }
