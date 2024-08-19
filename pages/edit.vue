@@ -29,39 +29,22 @@ const localesAsOptions = computed(() => {
 const themesAsOptions = [
   'auto',
   'system',
+  // Daisyui default themes
   'light',
+  // Custom dark
   'dark',
+  'omg',
   'legacy',
-  'cupcake',
-  'bumblebee',
-  'emerald',
-  'corporate',
+  // Daisyui dark
+  'black',
   'synthwave',
-  'retro',
+  'halloween',
+  'coffee',
+  // Daisyui light
+  'cupcake',
   'cyberpunk',
   'valentine',
-  'halloween',
-  'garden',
-  'forest',
-  'aqua',
-  'lofi',
-  'pastel',
-  'fantasy',
-  'wireframe',
-  'black',
-  'luxury',
-  'dracula',
-  'cmyk',
-  'autumn',
-  'business',
-  'acid',
-  'lemonade',
-  'night',
-  'coffee',
-  'winter',
-  'dim',
   'nord',
-  'sunset',
 ].map((theme) => ({
   text:
     theme !== 'auto'

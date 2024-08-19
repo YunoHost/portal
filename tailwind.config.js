@@ -18,7 +18,6 @@ module.exports = {
   ],
   daisyui: {
     themes: [
-      ...Object.keys(require('daisyui/src/theming/themes')),
       {
         legacy: {
           primary: '#2980b9',
@@ -44,7 +43,7 @@ module.exports = {
           '--rounded-box': '0rem',
           '--rounded-btn': '0rem',
         },
-        admin: {
+        dark: {
           primary: '#53a5fb',
           secondary: '#20cb98',
           accent: '#b957ea',
@@ -93,6 +92,17 @@ module.exports = {
           '--tab-radius': '0.5rem',
         },
       },
+      'light',
+      // dark
+      'black', // to rework contrasts
+      'synthwave',
+      'halloween',
+      'coffee',
+      // light
+      'cupcake',
+      'cyberpunk',
+      'valentine',
+      'nord',
     ],
   },
 }
