@@ -1,3 +1,14 @@
+yunohost-portal (12.0.2) testing; urgency=low
+
+  - cosmetics: misc margin and style tweaks (41f9198)
+  - theming: add link to possible custom css stylesheet (ff3674a)
+  - themes: reduce the number of available themes because there was too many, add new 'omg', 'legacy', 'admin' themes ([#12](http://github.com/YunoHost/yunohost-portal/pull/12))
+  - i18n: Translations updated for Indonesian, Russian, Turkish
+
+  Thanks to all contributors <3 ! (axolotle, cjdw, Ivan Davydov, Satuk Bug)
+
+ -- Alexandre Aubin <alex.aubin@mailoo.org>  Sat, 31 Aug 2024 19:56:46 +0200
+
 yunohost-portal (12.0.1) testing; urgency=low
 
   Initial testing release
