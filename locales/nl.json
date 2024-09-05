@@ -2,7 +2,8 @@
     "_language": {
         "code": "nl",
         "dir": "ltr",
-        "name": "Nederlands"
+        "name": "Nederlands",
+        "fallback": "nl"
     },
     "add_forward": "Voeg een e-mail doorstuuradres toe",
     "add_mail": "Voeg een e-mailalias toe",
@@ -13,8 +14,8 @@
     "footerlink_documentation": "Documentatie",
     "footerlink_edit": "Bewerk mijn profiel",
     "footerlink_support": "Ondersteuning",
-    "fullname": "Voor- en achternaam",
-    "good_practices_about_user_password": "Kies een gebruikerswachtwoord van minimaal 8 tekens - hoewel het een goede gewoonte is om langere (bijvoorbeeld een wachtwoordzin) te gebruiken en/of verschillende soorten tekens te gebruiken (hoofdletters, kleine letters, cijfers en speciale tekens).",
+    "fullname": "Volledige naam",
+    "good_practices_about_user_password": "Kies een gebruikerswachtwoord van minimaal 8 tekens - hoewel het een goede gewoonte is om een langer wachtwoord te gebruiken (d.w.z. een wachtwoordzin) en/of een variatie van tekens te gebruiken (hoofdletters, kleine letters, cijfers en speciale tekens).",
     "logged_out": "Uitgelogd",
     "login": "Inloggen",
     "logout": "Uitloggen",
@@ -24,5 +25,19 @@
     "new_mail": "nieuwe_email{'@'}mijndomein.org",
     "new_password": "Nieuw wachtwoord",
     "password": "Wachtwoord",
-    "username": "Gebruikersnaam"
+    "username": "Gebruikersnaam",
+    "api": {
+        "processing": "Verwerken…"
+    },
+    "app_list": "App-lijst",
+    "automatic": "Automatisch ({name})",
+    "back_to_apps": "Ga terug naar app-lijst",
+    "confirm_new_password": "Nieuw wachtwoord bevestigen",
+    "edit_browser_settings": "Browserinstellingen veranderen",
+    "edit_personal_settings": "Bewerk persoonlijke informatie",
+    "form_has_errors": "Het formulier bevat een aantal fouten",
+    "language": "Taal",
+    "mail_address": "E-mailadres",
+    "mail_forwards": "E-mail doorstuuradressen",
+    "save": "Opslaan"
 }
