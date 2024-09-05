@@ -39,5 +39,9 @@
     "language": "Taal",
     "mail_address": "E-mailadres",
     "mail_forwards": "E-mail doorstuuradressen",
-    "save": "Opslaan"
+    "save": "Opslaan",
+    "password_changed_reconnect": "Het wachtwoord is gewijzigd, gelieve opnieuw te verbinden.",
+    "possibly_invalid_password": "Wachtwoord is mogelijk ongeldig",
+    "possibly_invalid_username": "Gebruikersnaam is mogelijk ongeldig",
+    "no_apps": "Er is hier geen app te vinden, omdat er nog geen webapp op de server is geïnstalleerd of omdat je er geen toegang toe hebt. Neem contact op met beheerders van de server voor meer informatie!"
 }
