@@ -43,5 +43,27 @@
     "password_changed_reconnect": "Het wachtwoord is gewijzigd, gelieve opnieuw te verbinden.",
     "possibly_invalid_password": "Wachtwoord is mogelijk ongeldig",
     "possibly_invalid_username": "Gebruikersnaam is mogelijk ongeldig",
-    "no_apps": "Er is hier geen app te vinden, omdat er nog geen webapp op de server is geïnstalleerd of omdat je er geen toegang toe hebt. Neem contact op met beheerders van de server voor meer informatie!"
+    "no_apps": "Er is hier geen app te vinden, omdat er nog geen webapp op de server is geïnstalleerd of omdat je er geen toegang toe hebt. Neem contact op met beheerders van de server voor meer informatie!",
+    "remove": "Verwijder",
+    "search": "Zoeken",
+    "search_engine_placeholder": "Zoeken op {engine}",
+    "skip_link": {
+        "main_content": "Spring naar hoofdinhoud",
+        "footer": "Spring naar paginavoet"
+    },
+    "ssowat": {
+        "access_denied": "Je hebt geen toegang tot deze URL.",
+        "protected": "Log in om toegang te krijgen tot deze URL."
+    },
+    "theme": "Thema",
+    "user_profile_updated": "Persoonlijke gebruikersgegevens met succes bijgewerkt!",
+    "visitor": "Bezoeker",
+    "v": {
+        "email": "Ongeldig e-mailadres: mag enkel alfanumerische tekens en '_.' bevatten (bijv. iemand{'@'}voorbeeld.com, v00rbeeld-1{'@'}voorbeeld.com)",
+        "field_invalid": "Ongeldige veldwaarde",
+        "field_required": "Vereiste veldwaarde",
+        "password_not_match": "Wachtwoord komt niet overeen.",
+        "string_too_short": "Ongeldige waarde: moet minimaal {min} karakters bevatten"
+    },
+    "primary_mail_adress": "Primair e-mailadres"
 }
