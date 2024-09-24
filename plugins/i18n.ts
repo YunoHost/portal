@@ -1,5 +1,5 @@
 import { setLocale } from 'yup'
-import { usePreferedLocale, usePreferedTheme } from '@/composables/states'
+import { usePreferedTheme } from '@/composables/states'
 
 export default defineNuxtPlugin({
   async setup() {
@@ -21,14 +21,5 @@ export default defineNuxtPlugin({
     if (preferedTheme.value !== 'auto') {
       colorMode.preference = preferedTheme.value
     }
-  },
-  hooks: {
-    'app:created'() {
-      // Override browser locale if prefered language
-      const preferedLocale = usePreferedLocale()
-      if (preferedLocale.value !== 'auto') {
-        useNuxtApp().$i18n.locale.value = preferedLocale.value
-      }
-    },
   },
 })

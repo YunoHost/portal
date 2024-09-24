@@ -25,7 +25,7 @@ const usePreferedLocaleState = () =>
 
 export const usePreferedLocale = () => {
   const preferedLocale = usePreferedLocaleState()
-  const { locale, getBrowserLocale, defaultLocale } = useNuxtApp().$i18n
+  const { getBrowserLocale, defaultLocale, setLocale } = useNuxtApp().$i18n
 
   return computed({
     get: () => preferedLocale.value,
@@ -37,8 +37,7 @@ export const usePreferedLocale = () => {
         const browserLocale = getBrowserLocale()
         value = browserLocale || defaultLocale
       }
-
-      locale.value = value
+      setLocale(value)
     },
   })
 }

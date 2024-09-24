@@ -7,7 +7,7 @@ const queryMsg = useQueryMsg()
 const settings = await useSettings()
 const user = await useUser<User | null>()
 
-const footerLinks = [
+const footerLinks = computed(() => [
   { text: t('footerlink_edit'), to: '/edit' },
   {
     text: t('footerlink_documentation'),
@@ -20,7 +20,7 @@ const footerLinks = [
     to: `//${settings.value.domain}/yunohost/admin/`,
     newWindow: true,
   },
-]
+])
 
 async function logout() {
   const { error } = await useApi('/logout')
