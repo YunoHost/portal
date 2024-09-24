@@ -54,4 +54,5 @@ export default defineNuxtConfig({
     dataValue: 'theme',
     classSuffix: '',
   },
+  compatibilityDate: '2024-09-24',
 })
