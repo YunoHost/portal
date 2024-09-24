@@ -13,27 +13,27 @@
     "upgrade-deps": "yarn upgrade-interactive --latest"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.0.2",
-    "@nuxtjs/color-mode": "^3.3.2",
+    "@nuxt/devtools": "^1.5.1",
+    "@nuxtjs/color-mode": "^3.5.1",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@nuxtjs/google-fonts": "^3.0.1",
-    "@nuxtjs/i18n": "^8.0.0-rc.5",
-    "@nuxtjs/tailwindcss": "^6.9.5",
-    "@types/node": "^20.9.1",
-    "@typescript-eslint/parser": "^6.11.0",
-    "daisyui": "^4.4.2",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/i18n": "^8.5.5",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@types/node": "^22.6.1",
+    "@typescript-eslint/parser": "^8.7.0",
+    "daisyui": "^4.12.10",
     "eslint": "^8.54.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^9.28.0",
-    "eslint-plugin-vuejs-accessibility": "^2.1.0",
-    "nuxt": "^3.6.2",
-    "prettier": "^3.1.0",
-    "typescript": "^5.1.6"
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
+    "nuxt": "^3.13.2",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.2"
   },
   "dependencies": {
-    "@vee-validate/yup": "^4.10.8",
+    "@vee-validate/yup": "^4.13.2",
     "nuxt-icons": "^3.2.1",
-    "vee-validate": "^4.10.8"
+    "vee-validate": "^4.13.2"
   }
 }
