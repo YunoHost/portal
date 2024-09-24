@@ -72,24 +72,24 @@ async function logout() {
             class="flex flex-grow flex-wrap min-[500px]:w-full max-[500px]:flex-col max-[500px]:ms-auto"
           >
             <div v-if="user" class="flex-grow">
-              <!-- eslint-disable-next-line vuejs-accessibility/click-events-have-key-events vuejs-accessibility/no-static-element-interactions -->
-              <div
-                class="profile cursor-pointer flex flex-col"
-                @click="navigateTo('/edit')"
-              >
+              <div class="profile flex flex-col">
                 <span>
                   <span
-                    class="text-2xl font-extrabold tracking-tight leading-none"
+                    class="text-2xl font-extrabold tracking-tight leading-none me-2"
                   >
                     {{ user.username }}
                   </span>
-                  <YIcon name="pencil" size="1.25em" class="ms-2" />
+
+                  <NuxtLink to="/edit" class="link profile-link">
+                    <YIcon name="pencil" size="1.25em" />
+                    <span class="sr-only">{{ t('footerlink_edit') }}</span>
+                    <span class="text" aria-hidden="true">
+                      {{ t('footerlink_edit') }}
+                    </span>
+                  </NuxtLink>
                 </span>
                 <span class="leading-none">{{ user.fullname }}</span>
                 <span class="opacity-50">{{ user.mail }}</span>
-                <NuxtLink to="/edit" class="link sr-only focus:not-sr-only">
-                  {{ t('footerlink_edit') }}
-                </NuxtLink>
               </div>
             </div>
             <p
@@ -147,8 +147,12 @@ header .logo {
   width: 100px;
 }
 
-header .profile:not(:hover) .nuxt-icon {
+.profile-link .text {
   display: none;
+}
+.profile-link:hover .text,
+.profile-link:focus .text {
+  display: inline;
 }
 
 .focus-target:not(:focus-visible) {
