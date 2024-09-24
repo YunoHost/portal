@@ -19,5 +19,6 @@ module.exports = {
       },
     ],
     camelcase: 'warn',
+    'vue/no-v-html': 'off',
   },
 }

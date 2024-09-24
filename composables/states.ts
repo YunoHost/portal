@@ -112,7 +112,7 @@ export const useSettings = async () => {
 
     const logo = data.value!.portal_logo as unknown as string | undefined
     if (logo) {
-      const src = `https://${data.value.domain}/yunohost/sso/customassets/${logo}`
+      const src = `https://${data.value!.domain}/yunohost/sso/customassets/${logo}`
       const is = logo.slice(-4) === '.svg' ? 'svg' : 'img'
       data.value!.portal_logo = { is, src: is === 'svg' ? '' : src }
 
