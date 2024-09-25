@@ -1,3 +1,14 @@
+yunohost-portal (12.0.3) testing; urgency=low
+
+  - chore: upgrade deps  ([#14](http://github.com/YunoHost/yunohost-portal/pull/14))
+  - ui/ux: tweak the way the 'edit profile' link is displayed ([#15](http://github.com/YunoHost/yunohost-portal/pull/15))
+  - i18n: fix language setting ([#15](http://github.com/YunoHost/yunohost-portal/pull/15))
+  - i18n: Translations updated for Dutch
+
+  Thanks to all contributors <3 ! (axolotle, Mer)
+
+ -- Alexandre Aubin <alex.aubin@mailoo.org>  Wed, 25 Sep 2024 21:10:01 +0200
+
 yunohost-portal (12.0.2) testing; urgency=low
 
   - cosmetics: misc margin and style tweaks (41f9198)
