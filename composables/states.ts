@@ -25,7 +25,7 @@ const usePreferedLocaleState = () =>
 
 export const usePreferedLocale = () => {
   const preferedLocale = usePreferedLocaleState()
-  const { locale, getBrowserLocale, defaultLocale } = useNuxtApp().$i18n
+  const { getBrowserLocale, defaultLocale, setLocale } = useNuxtApp().$i18n
 
   return computed({
     get: () => preferedLocale.value,
@@ -37,8 +37,7 @@ export const usePreferedLocale = () => {
         const browserLocale = getBrowserLocale()
         value = browserLocale || defaultLocale
       }
-
-      locale.value = value
+      setLocale(value)
     },
   })
 }
@@ -112,7 +111,7 @@ export const useSettings = async () => {
 
     const logo = data.value!.portal_logo as unknown as string | undefined
     if (logo) {
-      const src = `https://${data.value.domain}/yunohost/sso/customassets/${logo}`
+      const src = `https://${data.value!.domain}/yunohost/sso/customassets/${logo}`
       const is = logo.slice(-4) === '.svg' ? 'svg' : 'img'
       data.value!.portal_logo = { is, src: is === 'svg' ? '' : src }
 

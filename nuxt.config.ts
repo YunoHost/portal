@@ -45,13 +45,11 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: 'locales',
     locales: locales as LocaleObject[],
-    detectBrowserLanguage: {
-      useCookie: false,
-    },
   },
   colorMode: {
     preference: 'system',
     dataValue: 'theme',
     classSuffix: '',
   },
+  compatibilityDate: '2024-09-24',
 })
