@@ -26,6 +26,8 @@ const apps = Object.values(appsData.value).map((app) => {
     ...app,
     url: '//' + app.url,
     description: app.description?.[locale.value] || app.description?.en,
+    label_hash: parseInt(app.label, 36),
+    initials: app.label.substring(0, 2),
   }
 })
 
@@ -83,24 +85,24 @@ async function onSearchSubmit() {
       <div v-if="!apps.length">
         <em>{{ t('no_apps') }}</em>
       </div>
-      <ul v-else class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <ul id="app-tiles" v-else class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
         <li
           v-for="app in apps"
           :key="app.label"
-          class="flex text-align flex-auto btn btn-outline btn-neutral !h-auto p-5 relative flex-nowrap items-start justify-normal text-left font-normal"
+          class="app-tile flex text-align flex-auto btn btn-outline btn-neutral !h-auto p-5 relative flex-nowrap items-start justify-normal text-left font-normal"
         >
           <img
             v-if="app.logo"
             aria-hidden
             :src="app.logo"
-            class="w-24 h-24 rounded me-4 bg-white"
+            class="app-logo w-24 h-24 rounded me-4 bg-white"
             alt=""
           />
           <div>
-            <h4 class="text-xl font-bold">
+            <h4 class="app-label text-xl font-bold" :data-labelhash="app.label_hash" :data-initials="app.initials">
               <a :href="app.url" class="">{{ app.label }}</a>
             </h4>
-            <div v-if="app.description" v-html="app.description" />
+            <div class="app-description" v-if="app.description" v-html="app.description" />
           </div>
         </li>
       </ul>
