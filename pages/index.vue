@@ -26,7 +26,7 @@ const apps = Object.values(appsData.value).map((app) => {
     ...app,
     url: '//' + app.url,
     description: app.description?.[locale.value] || app.description?.en,
-    label_hash: parseInt(app.label, 36),
+    label_hash: parseInt(app.label, 36) % 10000,
     initials: app.label.substring(0, 2),
   }
 })
@@ -90,6 +90,7 @@ async function onSearchSubmit() {
           v-for="app in apps"
           :key="app.label"
           class="app-tile flex text-align flex-auto btn btn-outline btn-neutral !h-auto p-5 relative flex-nowrap items-start justify-normal text-left font-normal"
+          :style="`--label-hash: ${app.label_hash}`"
         >
           <img
             v-if="app.logo"
@@ -99,7 +100,7 @@ async function onSearchSubmit() {
             alt=""
           />
           <div>
-            <h4 class="app-label text-xl font-bold" :data-labelhash="app.label_hash" :data-initials="app.initials">
+            <h4 class="app-label text-xl font-bold" :data-initials="app.initials">
               <a :href="app.url" class="">{{ app.label }}</a>
             </h4>
             <div class="app-description" v-if="app.description" v-html="app.description" />
