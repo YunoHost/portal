@@ -1,3 +1,12 @@
+yunohost-portal (12.0.4) testing; urgency=low
+
+  - Add a few class names + data attributes (label hash, initials) for easier theming and attempt to reproduce the legacy periodic-table look ([#16](http://github.com/YunoHost/yunohost-portal/pull/16))
+  - Fix previous commit: the label hash is needed on the tile, not h4, and we can't really use the attr as int in css so let's hack a variable through inline style (+ css doesn't like integers that are too big) (82ba009)
+
+  Thanks to all contributors <3 ! (Axolotle)
+
+ -- Alexandre Aubin <alex.aubin@mailoo.org>  Wed, 02 Oct 2024 20:58:12 +0200
+
 yunohost-portal (12.0.3) testing; urgency=low
 
   - chore: upgrade deps  ([#14](http://github.com/YunoHost/yunohost-portal/pull/14))
