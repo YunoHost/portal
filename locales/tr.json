@@ -25,5 +25,38 @@
     "new_mail": "newmail{'@'}mydomain.org",
     "new_password": "Yeni parola",
     "password": "Parola",
-    "username": "Kullanıcı adı"
+    "username": "Kullanıcı adı",
+    "app_list": "Uygulama listesi",
+    "automatic": "Otomatik bir şekilde ({name})",
+    "back_to_apps": "Uygulama listesine geri dön",
+    "confirm_new_password": "Yeni şifreyi onayla",
+    "edit_browser_settings": "Sadece tarayıcıya özel ayarları düzenle",
+    "edit_personal_settings": "Kişisel bilgileri düzenle",
+    "form_has_errors": "Bu formda hatalar bulundu",
+    "language": "Dil",
+    "mail_address": "E-posta adresi",
+    "mail_forwards": "E-posta yönlendirme adresi",
+    "no_apps": "Bu listede herhangi bir uygulama yok, ya henüz bu sunucuya bir web uygulaması inmediği için ya da herhangi bir erişimin yok. Lütfen daha fazla bilgi için sunucu yöneticileri ile iletişime geçin!",
+    "password_changed_reconnect": "Şifreniz değişmiştir, lütfen tekrardan bağlanın.",
+    "possibly_invalid_password": "Şifre geçersiz olabilir",
+    "possibly_invalid_username": "Kullanıcı adı geçersiz olabilir",
+    "primary_mail_adress": "Ana e-posta adresi",
+    "remove": "Sil",
+    "save": "Kaydet",
+    "search": "Ara",
+    "search_engine_placeholder": "{engine}'da ara",
+    "skip_link": {
+        "main_content": "Ana içeriğe geç",
+        "footer": "Altbilgiye geç"
+    },
+    "ssowat": {
+        "access_denied": "Bu bağlantıya erişiminiz bulunmamaktadır.",
+        "protected": "Lütfen bağlantıya erişmek için giriş yapın."
+    },
+    "theme": "Tema",
+    "user_profile_updated": "Kişisel kullanıcı bilgileri başarıyla güncellendi!",
+    "visitor": "Ziyaretçi",
+    "api": {
+        "processing": "İşleniyor…"
+    }
 }
