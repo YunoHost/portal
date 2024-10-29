@@ -92,6 +92,7 @@ export interface Settings {
   public: boolean
   portal_logo?: { is: 'img' | 'svg'; src: string }
   portal_theme: string
+  portal_tile_theme: 'descriptive' | 'simple' | 'periodic'
   portal_title?: string
   search_engine?: string
   search_engine_name?: string

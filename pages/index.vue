@@ -26,7 +26,7 @@ const apps = Object.values(appsData.value).map((app) => {
     ...app,
     url: '//' + app.url,
     description: app.description?.[locale.value] || app.description?.en,
-    label_hash: parseInt(app.label, 36) % 10000,
+    label_hash: parseInt(app.label.replaceAll(' ', ''), 36) % 10000,
     initials: app.label.substring(0, 2),
   }
 })
@@ -40,6 +40,24 @@ async function onSearchSubmit() {
     },
   })
 }
+
+const tileClasses = computed(() => {
+  return {
+    descriptive: {
+      container: 'md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4',
+      img: 'me-4',
+      title: 'text-xl leading-6 font-bold',
+    },
+    simple: {
+      tile: 'flex-col text-center text-xl leading-6 font-bold items-center',
+    },
+    periodic: {
+      container: '',
+      tile: 'flex-col p-3 items-center',
+      title: 'leading-6 text-center text-base',
+    },
+  }[settings.value.portal_tile_theme]
+})
 </script>
 
 <template>
@@ -85,25 +103,42 @@ async function onSearchSubmit() {
       <div v-if="!apps.length">
         <em>{{ t('no_apps') }}</em>
       </div>
-      <ul id="app-tiles" v-else class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <ul
+        v-else
+        id="app-tiles"
+        class="theme-descriptive grid gap-4"
+        :class="[settings.portal_tile_theme, tileClasses.container]"
+      >
         <li
           v-for="app in apps"
           :key="app.label"
-          class="app-tile flex text-align flex-auto btn btn-outline btn-neutral !h-auto p-5 relative flex-nowrap items-start justify-normal text-left font-normal"
+          class="app-tile flex text-align flex-auto btn btn-dark !h-auto p-5 relative flex-nowrap items-start justify-normal text-left font-normal"
+          :class="tileClasses.tile"
           :style="`--label-hash: ${app.label_hash}`"
         >
           <img
-            v-if="app.logo"
+            v-if="app.logo && settings.portal_tile_theme !== 'periodic'"
             aria-hidden
             :src="app.logo"
-            class="app-logo w-24 h-24 rounded me-4 bg-white"
+            class="app-logo w-24 h-24 min-w-24 rounded bg-white"
+            :class="tileClasses.img"
             alt=""
           />
           <div>
-            <h4 class="app-label text-xl font-bold" :data-initials="app.initials">
+            <h4
+              :data-initials="app.initials"
+              class="app-label break-all"
+              :class="tileClasses.title"
+            >
               <a :href="app.url" class="">{{ app.label }}</a>
             </h4>
-            <div class="app-description" v-if="app.description" v-html="app.description" />
+            <p
+              v-if="
+                app.description && settings.portal_tile_theme === 'descriptive'
+              "
+              class="app-description mt-2"
+              v-html="app.description"
+            />
           </div>
         </li>
       </ul>
@@ -119,5 +154,36 @@ async function onSearchSubmit() {
   left: 0px;
   right: 0px;
   bottom: 0px;
+}
+
+#app-tiles.simple {
+  grid-template-columns: repeat(auto-fill, 180px);
+  grid-template-rows: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+#app-tiles.periodic {
+  grid-template-columns: repeat(auto-fill, 160px);
+  grid-template-rows: repeat(auto-fill, 10rem);
+}
+
+#app-tiles.periodic .app-tile {
+  min-height: 10rem;
+  border-radius: 0.3em !important;
+  --app-tile-colors: #f94144, #f3722c, #f8961e, #f9844a, #f9c74f, #90be6d,
+    #43aa8b, #4d908e, #577590, #277da1;
+  --app-tile-colors-n: 10;
+  color: white;
+  --i: mod(var(--label-hash), var(--app-tile-colors-n));
+  background: linear-gradient(var(--app-tile-colors)) no-repeat 0
+    calc(var(--i) * 100% / (var(--app-tile-colors-n) - 1)) / 100%
+    calc(1px * infinity);
+}
+#app-tiles.periodic .app-label:before {
+  content: attr(data-initials);
+  display: block;
+  font-size: 5em;
+  font-weight: 700;
+  padding-top: 0.5em;
+  padding-bottom: 0.3em;
 }
 </style>
