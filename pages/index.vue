@@ -127,7 +127,7 @@ const tileClasses = computed(() => {
           <div>
             <h4
               :data-initials="app.initials"
-              class="app-label break-all"
+              class="app-label break-words"
               :class="tileClasses.title"
             >
               <a :href="app.url" class="">{{ app.label }}</a>
