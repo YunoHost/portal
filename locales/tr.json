@@ -15,7 +15,7 @@
     "footerlink_edit": "Profilimi düzenle",
     "footerlink_support": "Destek",
     "fullname": "Ad Soyad",
-    "good_practices_about_user_password": "En az 8 karakterden oluşan bir kullanıcı şifresi seçin - daha uzun olanları (örneğin bir şifre) ve / veya çeşitli karakterleri (büyük harf, küçük harf, rakam ve özel karakterler) kullanmak daha iyidir.",
+    "good_practices_about_user_password": "En az 8 karakterden oluşan bir kullanıcı parolası seçin - ancak daha uzun parolalar (yani parola) kullanmak ve/veya çeşitli karakterler (büyük harf, küçük harf, rakamlar ve özel karakterler) kullanmak iyi bir uygulamadır.",
     "logged_out": "Çıkış yapıldı",
     "login": "Oturum aç",
     "logout": "Çıkış Yap",
@@ -58,5 +58,12 @@
     "visitor": "Ziyaretçi",
     "api": {
         "processing": "İşleniyor…"
+    },
+    "v": {
+        "email": "Geçersiz e-posta: yalnızca alfasayısal karakterler, '_.' karakterleri kullanılmalıdır (örn. someone{'@'}example.com, s0me-1{'@'}example.com)",
+        "field_invalid": "Alan değeri geçersiz",
+        "field_required": "Alan değeri zorunludur",
+        "password_not_match": "Şifreler eşleşmiyor.",
+        "string_too_short": "Geçersiz değer: en az {min} karakter olmalıdır"
     }
 }
