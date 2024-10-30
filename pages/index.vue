@@ -120,7 +120,7 @@ const tileClasses = computed(() => {
             v-if="app.logo && settings.portal_tile_theme !== 'periodic'"
             aria-hidden
             :src="app.logo"
-            class="app-logo w-24 h-24 min-w-24 rounded bg-white"
+            class="app-logo w-24 h-24 min-w-24 rounded-xl"
             :class="tileClasses.img"
             alt=""
           />
@@ -156,6 +156,10 @@ const tileClasses = computed(() => {
   bottom: 0px;
 }
 
+#app-tiles .app-logo {
+  filter: drop-shadow(2px 2px 5px #222a);
+}
+
 #app-tiles.simple {
   grid-template-columns: repeat(auto-fill, 180px);
   grid-template-rows: repeat(auto-fill, minmax(180px, 1fr));
@@ -164,6 +168,11 @@ const tileClasses = computed(() => {
 #app-tiles.periodic {
   grid-template-columns: repeat(auto-fill, 160px);
   grid-template-rows: repeat(auto-fill, 10rem);
+}
+
+#app-tiles.simple .app-tile, #app-tiles.descriptive .app-tile {
+  background-color: #1112;
+  border: none;
 }
 
 #app-tiles.periodic .app-tile {
