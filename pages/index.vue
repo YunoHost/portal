@@ -175,6 +175,11 @@ const tileClasses = computed(() => {
   border: none;
 }
 
+#app-tiles.simple .app-tile:hover, #app-tiles.descriptive .app-tile:hover {
+  background-color: #7777;
+  border: none;
+}
+
 #app-tiles.periodic .app-tile {
   min-height: 10rem;
   border-radius: 0.3em !important;
