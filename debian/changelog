@@ -1,3 +1,13 @@
+yunohost-portal (12.0.6) stable; urgency=low
+
+  - More css improvements for app tile styles? (2d1d23c)
+  - More css tweaks ... fix hovering style for app tiles? (13aaccb)
+  - i18n: Translations updated for Turkish
+
+  Thanks to all contributors <3 ! (Alexandre Aubin, Atalay Daban)
+
+ -- tituspijean <titus+yunohost@pijean.ovh>  Wed, 30 Oct 2024 22:17:24 +0100
+
 yunohost-portal (12.0.5) testing; urgency=low
 
   - feat: add different style/theme for app tiles ([#20](http://github.com/YunoHost/yunohost-portal/pull/20))
