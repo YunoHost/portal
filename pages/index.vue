@@ -166,22 +166,24 @@ const tileClasses = computed(() => {
 }
 
 #app-tiles.periodic {
-  grid-template-columns: repeat(auto-fill, 160px);
-  grid-template-rows: repeat(auto-fill, 10rem);
+  grid-template-columns: repeat(auto-fill, 180px);
+  grid-template-rows: repeat(auto-fill, 180px);
 }
 
-#app-tiles.simple .app-tile, #app-tiles.descriptive .app-tile {
+#app-tiles.simple .app-tile,
+#app-tiles.descriptive .app-tile {
   background-color: #1112;
   border: none;
 }
 
-#app-tiles.simple .app-tile:hover, #app-tiles.descriptive .app-tile:hover {
+#app-tiles.simple .app-tile:hover,
+#app-tiles.descriptive .app-tile:hover {
   background-color: #7777;
   border: none;
 }
 
 #app-tiles.periodic .app-tile {
-  min-height: 10rem;
+  min-height: 180px;
   border-radius: 0.3em !important;
   --app-tile-colors: #f94144, #f3722c, #f8961e, #f9844a, #f9c74f, #90be6d,
     #43aa8b, #4d908e, #577590, #277da1;
@@ -199,5 +201,21 @@ const tileClasses = computed(() => {
   font-weight: 700;
   padding-top: 0.5em;
   padding-bottom: 0.3em;
+}
+
+@media (max-width: 620px) {
+  #app-tiles.simple,
+  #app-tiles.periodic {
+    grid-template-columns: repeat(auto-fill, calc(50vw - 2rem));
+    grid-template-rows: repeat(auto-fill, calc(50vw - 2rem));
+  }
+
+  #app-tiles.periodic .app-tile {
+    min-height: calc(50vw - 2rem);
+  }
+  #app-tiles.periodic .app-label:before {
+    padding-top: 9vw;
+    padding-bottom: 8vw;
+  }
 }
 </style>

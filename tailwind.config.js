@@ -16,6 +16,15 @@ module.exports = {
     'bg-warning',
     'bg-error',
   ],
+  theme: {
+    screens: {
+      sm: '620px',
+      md: '848px',
+      lg: '1044px',
+      xl: '1240px',
+      '2xl': '1436px',
+    },
+  },
   daisyui: {
     themes: [
       {
