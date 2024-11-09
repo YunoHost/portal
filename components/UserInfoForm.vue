@@ -92,7 +92,7 @@ const onSubmit = handleSubmit(async (form) => {
     </FormField>
 
     <FormField name="mail" :label="$t('primary_mail_adress')" class="mb-10">
-      <TextInput name="mail" type="text" class="w-full" disabled />
+      <TextInput name="mail" type="text" class="w-full" :disabled="!user.can_edit_main_email" />
     </FormField>
 
     <TextInputList
@@ -103,6 +103,7 @@ const onSubmit = handleSubmit(async (form) => {
       :button-label="$t('add_mail')"
       :placeholder="$t('new_mail')"
       class="mb-10"
+      :disabled="!user.can_edit_email_alias"
     />
 
     <TextInputList
@@ -112,6 +113,7 @@ const onSubmit = handleSubmit(async (form) => {
       :input-label="$t('mail_forward')"
       :button-label="$t('add_forward')"
       :placeholder="$t('new_forward')"
+      :disabled="!user.can_edit_email_forward"
     />
   </YForm>
 </template>
