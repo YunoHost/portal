@@ -84,6 +84,8 @@ const login = handleSubmit(async (form) => {
           type="text"
           :placeholder="t('username')"
           autocomplete="username"
+          autocapitalize="off"
+          spellcheck="false"
           class="w-full"
         />
       </FormField>
