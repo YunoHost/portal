@@ -57,7 +57,7 @@
         "field_required": "Requírese un valor para o campo",
         "password_not_match": "O contrasinais non concordan.",
         "string_too_short": "Valor non válido: ten que ter {min} caracteres como mínimo",
-        "email": "Correo non válido: só pode ser alfanumérico e con '_' (ex. persoa{'@'}exemplo.com, p3rs0a-1{'@'}exemplo.com)"
+        "email": "Correo non válido: só pode ser alfanumérico e con '_' (ex. persoa{'@'}exemplo.com, p3rs0a_1{'@'}exemplo.com)"
     },
     "app_list": "Lista de Apps",
     "back_to_apps": "Volver á lista de apps",
