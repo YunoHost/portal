@@ -1,3 +1,12 @@
+yunohost-portal (12.0.7) stable; urgency=low
+
+  - Update breakpoints to tile size + mobile tiles sizing in vw (14ab2c7)
+  - login: disable autocapitalize and spellcheck for the username form ([#22](http://github.com/YunoHost/yunohost-portal/pull/22))
+
+  Thanks to all contributors <3 ! (axolotle, OniriCorpe)
+
+ -- Alexandre Aubin <alex.aubin@mailoo.org>  Wed, 27 Nov 2024 12:06:13 +0100
+
 yunohost-portal (12.0.6) stable; urgency=low
 
   - More css improvements for app tile styles? (2d1d23c)
