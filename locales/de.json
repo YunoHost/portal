@@ -60,7 +60,7 @@
     "user_profile_updated": "Aktualisierung der Benutzerdaten erfolgreich!",
     "visitor": "Besucher",
     "v": {
-        "email": "Ungültige E-Mail: Zeichenkette muss alphanumerisch und „_.“ sein. Nur Zeichen (z. B. jemand{'@'}example.com, s0me-1{'@'}example.com)",
+        "email": "Ungültige E-Mail: Darf nur alphanumerische Charaktere und '_.' enthalten (z.B. jemand{'@'}beispiel.de, jem4nd_h1ier{'@'}beispiel.de)",
         "field_invalid": "Falscher Feldinhalt",
         "password_not_match": "Die Passwörter stimmen nicht überein.",
         "field_required": "Notwendiger Feldinhalt",
