@@ -16,7 +16,7 @@
     "footerlink_support": "支持",
     "fullname": "全名",
     "good_practices_about_user_password": "选择至少8个字符的用户密码-尽管使用较长的用户密码（即密码短语）和/或使用各种字符（大写，小写，数字和特殊字符）是一种很好的做法。",
-    "logged_out": "登出",
+    "logged_out": "注销",
     "login": "登录",
     "logout": "登出",
     "mail_addresses": "电子邮件地址",
