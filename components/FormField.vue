@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useField } from 'vee-validate'
+import { useFieldError } from 'vee-validate'
 import { formGroupExtras } from '@/composables/form'
 
 const props = defineProps<{
@@ -12,7 +12,7 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
-const { errorMessage } = useField(() => props.name)
+const errorMessage = useFieldError(() => props.name)
 const invalid = computed(() => !!errorMessage.value)
 const describedBy = computed(() => {
   return (
