@@ -52,5 +52,18 @@
     },
     "back_to_apps": "Tornar a la lista d’aplicacions",
     "primary_mail_adress": "Adreça electronica principala",
-    "search_engine_placeholder": "Cercar sus {engine}"
+    "search_engine_placeholder": "Cercar sus {engine}",
+    "no_apps": "I a cap d'aplicacion a listar aquí, o perque cap d'aplicacion web es pas encara installada sul servidor, o perque i avètz pas accès. Volgatz verificar amb las personas encargadas de l'administracion del servidor per mai d'informacions !",
+    "v": {
+        "email": "Adreça electronica : deu èsser alfanumerica e pòt conténer los caractèrs «_-.» (per exemple : martin{'@'}exemple.com, m4rti-8{'@'}exemple.com)",
+        "field_invalid": "La valor del camp es invalida",
+        "field_required": "La valor del camp es obligatòria",
+        "password_not_match": "Los senhals correspondon pas.",
+        "string_too_short": "Valor invalida : deu almens aver {min} caractèrs"
+    },
+    "mail_forwards": "Adreças de transferiment",
+    "password_changed_reconnect": "Lo senhal es estat cambiat, mercés de vos reconnectar.",
+    "possibly_invalid_password": "Lo senhal es probablament invalid",
+    "possibly_invalid_username": "Lo nom d'utilizaire es probablament pas valid",
+    "user_profile_updated": "Las informacions personalas del compte son estadas corrèctament actualizadas !"
 }
