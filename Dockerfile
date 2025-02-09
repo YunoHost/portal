@@ -1,4 +1,4 @@
-FROM node:18.17.0-bookworm-slim
+FROM node:20.18-bookworm-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ="Europe/Paris"
