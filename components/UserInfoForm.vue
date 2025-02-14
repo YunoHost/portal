@@ -9,6 +9,7 @@ import type { Feedback } from '@/composables/form'
 const { t } = useI18n()
 
 const user = await useUser()
+const settings = await useSettings()
 const loading: Ref<boolean> = ref(false)
 const feedback: Ref<Feedback> = ref(null)
 
@@ -39,11 +40,22 @@ watch(
 const onSubmit = handleSubmit(async (form) => {
   loading.value = true
 
+  let excludedFields = []
+  if (!settings.value.allow_edit_email) {
+    excludedFields.push('email')
+  }
+  if (!settings.value.allow_edit_email_alias) {
+    excludedFields.push('mailalias')
+  }
+  if (!settings.value.allow_edit_email_forward) {
+    excludedFields.push('mailforward')
+  }
+
   const { error, data } = await useApi<
-    Pick<User, 'fullname' | 'mailalias' | 'mailforward'>
+    Pick<User, 'fullname' | 'mail' | 'mailalias' | 'mailforward'>
   >('/update', {
     method: 'PUT',
-    body: exclude(form, 'mail'),
+    body: exclude(form, ...excludedFields),
   })
 
   if (error.value) {
@@ -92,7 +104,7 @@ const onSubmit = handleSubmit(async (form) => {
     </FormField>
 
     <FormField name="mail" :label="$t('primary_mail_adress')" class="mb-10">
-      <TextInput name="mail" type="text" class="w-full" disabled />
+      <TextInput name="mail" type="text" class="w-full" :disabled="!settings.allow_edit_email" />
     </FormField>
 
     <TextInputList
@@ -103,6 +115,7 @@ const onSubmit = handleSubmit(async (form) => {
       :button-label="$t('add_mail')"
       :placeholder="$t('new_mail')"
       class="mb-10"
+      :disabled="!settings.allow_edit_email_alias"
     />
 
     <TextInputList
@@ -112,6 +125,7 @@ const onSubmit = handleSubmit(async (form) => {
       :input-label="$t('mail_forward')"
       :button-label="$t('add_forward')"
       :placeholder="$t('new_forward')"
+      :disabled="!settings.allow_edit_email_forward"
     />
   </YForm>
 </template>

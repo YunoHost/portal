@@ -8,6 +8,7 @@ const props = defineProps<{
   buttonLabel: string
   type: HTMLInputElement['type']
   placeholder?: string
+  disabled: boolean
 }>()
 
 const group: Ref<HTMLElement | null> = ref(null)
@@ -42,6 +43,7 @@ function onAdd() {
           :name="`${name}[${idx}]`"
           :type="type"
           :placeholder="placeholder"
+          :disabled="disabled"
           class="join-item w-full"
         />
         <YButton
@@ -52,10 +54,11 @@ function onAdd() {
           :text="$t('remove')"
           class="join-item px-3"
           @click="remove(idx)"
+          v-if="!disabled"
         />
       </div>
     </FormField>
 
-    <YButton :text="buttonLabel" @click="onAdd" />
+    <YButton :text="buttonLabel" @click="onAdd" v-if="!disabled"/>
   </fieldset>
 </template>
